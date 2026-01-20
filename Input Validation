@@ -1,0 +1,54 @@
+public class Main {
+
+    public static void Validation( String name , String mail, int age) {
+
+        if(name.isEmpty()|| name==null ||name.trim().length() <=3){
+            System.out.println("Name shd containes atleast 3 characters");
+            return;
+        }
+        int index = mail.indexOf('@');
+        if(!mail.contains("@") || index == 0 || index == mail.length()-1 || !mail.substring(index+1).contains(".")){
+            System.out.println("Invalid MailID");
+            return;
+        }
+        if(age < 18){
+            System.out.println("Age shd be minimum of 18 years old");
+            return;
+        }
+
+        System.out.println("Registration completed!"+name);
+
+
+    }
+
+
+
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Name");
+       String name = sc.nextLine();
+        System.out.println("Enter Email");
+        String mail = sc.nextLine();
+        System.out.println("Enter Age");
+        String ageInput = sc.nextLine() ;
+
+
+
+          int age ;
+        try{
+         age =  Integer.parseInt(ageInput);
+        }catch(NumberFormatException e){
+            System.out.println("Age should be a number"+e);
+            return;
+
+        }
+
+
+        Validation(name, mail, age);
+
+
+    }
+
+        }
