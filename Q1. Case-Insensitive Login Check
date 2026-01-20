@@ -1,0 +1,26 @@
+
+public class Main {
+
+    public static void Validation( String mail) {
+
+        String storedEmail = "Nandini@gmail.com";
+
+        if(mail!=null && storedEmail.equalsIgnoreCase(mail.trim())){
+            System.out.println("Valid");
+        }else
+        {
+            System.out.println("INValid");
+        }
+
+
+    }
+
+    public static void main(String[] args) {
+
+
+        Validation("nandini@GMAIL.com");
+
+
+    }
+
+        }
