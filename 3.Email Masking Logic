@@ -1,0 +1,24 @@
+public class Main {
+
+    public static String maskEmail( String mail) {
+
+      int end =  mail.indexOf("@");
+      StringBuilder s = new StringBuilder(mail);
+
+      for(int i=3 ;i<end ;i++){
+          s.setCharAt(i,'*');
+      }
+      return s.toString();
+
+    }
+
+    public static void main(String[] args) {
+
+
+
+       System.out.println( maskEmail("nandini@gmail.com"));
+
+
+    }
+
+        }
