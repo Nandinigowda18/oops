@@ -1,0 +1,25 @@
+
+public class Main {
+
+    public static String validateAndExtractToken( String name ) {
+
+       name = name.toLowerCase().trim();
+       String prefix="nandini";
+
+       if(!name.startsWith(prefix)|| name == null){
+           return null ;
+       }
+       return name.substring(0,prefix.length());
+
+    }
+
+    public static void main(String[] args) {
+
+
+
+       System.out.println( validateAndExtractToken("Nandinigowda"));
+
+
+    }
+
+        }
