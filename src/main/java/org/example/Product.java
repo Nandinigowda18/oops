@@ -1,16 +1,24 @@
 package org.example;
 
-public class Product {
+public abstract class Product {
 
-    String productId;
-    String productName;
-    double price;
-    int quantity;
 
-    public Product(String productId, String productName, double price, int quantity) {
-        this.productId = productId;
-        this.productName = productName;
-        this.price = price;
-        this.quantity = quantity;
-    }
+     String name ;
+     double price ;
+     double discount;
+     boolean isPrime;
+
+     Product(String name , double price, double discount, boolean isPrime){
+         this.name = name;
+         this.price= price;
+         this.discount = discount;
+         this.isPrime = isPrime;
+     }
+
+     public double totaldisc(){
+         discount = ( discount * price )/100;
+         return price - discount;
+     }
+
+
 }

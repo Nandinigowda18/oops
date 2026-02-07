@@ -8,19 +8,12 @@ import java.util.*;
 
 public class Main {
 
-
-
     public static void main(String[] args) {
 
-        Service service = new Service();
+      Product product = new Electronics("Tv",100.0,5 , true);
 
-        service.addProduct("1","abc",10.00, 2);
-        service.addProduct("2","abc",10.00, 2);
+      System.out.println("price of TV after Discount "+product.totaldisc());
 
-        service.list();
-        //service.delete("1");
-
-//        service.updateProduct("1","fddg",null, null);
 
     }
 
